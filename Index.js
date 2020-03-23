@@ -183,6 +183,48 @@ some of the built-in object mthods: .keys(), .values(), .entries() all converts 
       }*/
 
 
+// object.keys() - 
+//      returns an array of the objects property names in the same order that they arewithin the object.
 
+const object1 = {
+    a: 'somestring',
+    b: 42,
+    c: false
+  };
+  
+  console.log(Object.keys(object1)); //this code would return array = ["a", "b", "c"]
+
+  //objects.values() - 
+  //        returns an array of the objects property values in the same order that they are within the onject.
+
+  const object1 = {
+    a: 'somestring',
+    b: 42,
+    c: false
+  };
+  
+  console.log(Object.values(object1));
+  // expected output: Array ["somestring", 42, false]
+
+  //objects.entries() - 
+  //        returns an array of the objects string keyed properties [key, value] in thier respective pairs.
+  //        but the order in which their output is not garanteed. 
+
+  //if an order is required: Object.entries(obj).sort((a, b) => b[0].localeCompare(a[0])); 
+  //the syntax shown can be used to sort that order.
+
+  const object1 = {
+    a: 'somestring',
+    b: 42
+  };
+  
+  for (let [key, value] of Object.entries(object1)) {
+    console.log(`${key}: ${value}`);
+  }
+  
+  // expected output:
+  // "a: somestring"
+  // "b: 42"
+  // order is not guaranteed
 
 
